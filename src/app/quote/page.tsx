@@ -4,15 +4,9 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Package, Truck, MapPin, Calendar, CreditCard, Camera, X } from 'lucide-react';
 import { useState, useRef } from 'react';
-import dynamic from 'next/dynamic';
 import emailjs from '@emailjs/browser';
 import { Loader2 } from 'lucide-react';
-
-// Dynamically import LocationPicker to avoid SSR issues with Leaflet
-const LocationPicker = dynamic(() => import('@/components/LocationPicker'), {
-  ssr: false,
-  loading: () => <div className="h-[300px] w-full bg-gray-100 animate-pulse rounded-lg flex items-center justify-center text-gray-400">Loading Map...</div>
-});
+import LocationPicker from '@/components/LocationPicker';
 
 export default function QuotePage() {
   const [images, setImages] = useState<string[]>([]);
@@ -54,7 +48,7 @@ export default function QuotePage() {
     setIsSending(true);
 
     if (!pickupLocation || !deliveryLocation) {
-      alert('Please select both pickup and delivery locations on the map.');
+      alert('Please select both pickup and delivery locations.');
       setIsSending(false);
       return;
     }
@@ -83,9 +77,9 @@ export default function QuotePage() {
 
     // Replace these with your actual EmailJS Service ID, Template ID, and Public Key
     // You can get these from https://dashboard.emailjs.com/
-    const SERVICE_ID = 'YOUR_SERVICE_ID';
-    const TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-    const PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+    const SERVICE_ID = 'service_ze2d46a';
+    const TEMPLATE_ID = 'template_utyt0nb';
+    const PUBLIC_KEY = 'Owp0hti2ljiZFA1na';
 
     emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
       .then((result) => {
