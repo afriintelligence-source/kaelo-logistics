@@ -1,8 +1,36 @@
+'use client';
+
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Package, Truck, MapPin, Calendar, CreditCard, Camera } from 'lucide-react';
+import { Package, Truck, MapPin, Calendar, CreditCard, Camera, X } from 'lucide-react';
+import { useState } from 'react';
+import dynamic from 'next/dynamic';
+
+// Dynamically import LocationPicker to avoid SSR issues with Leaflet
+const LocationPicker = dynamic(() => import('@/components/LocationPicker'), {
+  ssr: false,
+  loading: () => <div className="h-[300px] w-full bg-gray-100 animate-pulse rounded-lg flex items-center justify-center text-gray-400">Loading Map...</div>
+});
 
 export default function QuotePage() {
+  const [images, setImages] = useState<string[]>([]);
+  const [pickupLocation, setPickupLocation] = useState<any>(null);
+  const [deliveryLocation, setDeliveryLocation] = useState<any>(null);
+
+  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      const file = e.target.files[0];
+      const imageUrl = URL.createObjectURL(file);
+      setImages([...images, imageUrl]);
+    }
+  };
+
+  const removeImage = (index: number) => {
+    const newImages = [...images];
+    newImages.splice(index, 1);
+    setImages(newImages);
+  };
+
   return (
     <main className="min-h-screen bg-gray-50 font-sans">
       <Navbar />
@@ -24,22 +52,18 @@ export default function QuotePage() {
               <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
                 <MapPin className="text-amber-500" /> Pickup & Delivery Details
               </h2>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-4">
-                  <h3 className="font-semibold text-gray-700">Pickup From</h3>
-                  <input type="text" placeholder="Street Address" className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400" />
-                  <div className="grid grid-cols-2 gap-4">
-                    <input type="text" placeholder="City" className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400" />
-                    <input type="text" placeholder="Postal Code" className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400" />
-                  </div>
+                  <LocationPicker
+                    label="Pickup From"
+                    onLocationSelect={setPickupLocation}
+                  />
                 </div>
                 <div className="space-y-4">
-                  <h3 className="font-semibold text-gray-700">Deliver To</h3>
-                  <input type="text" placeholder="Street Address" className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400" />
-                  <div className="grid grid-cols-2 gap-4">
-                    <input type="text" placeholder="City" className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400" />
-                    <input type="text" placeholder="Postal Code" className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400" />
-                  </div>
+                  <LocationPicker
+                    label="Deliver To"
+                    onLocationSelect={setDeliveryLocation}
+                  />
                 </div>
               </div>
             </div>
@@ -81,10 +105,36 @@ export default function QuotePage() {
                       <p className="text-sm text-gray-500"><span className="font-semibold">Click to upload</span> or drag and drop</p>
                       <p className="text-xs text-gray-500">SVG, PNG, JPG or GIF (MAX. 5MB)</p>
                     </div>
-                    <input id="dropzone-file" type="file" className="hidden" accept="image/*" />
+                    <input id="dropzone-file" type="file" className="hidden" accept="image/*" onChange={handleImageUpload} />
                   </label>
                 </div>
                 <p className="text-xs text-gray-500 mt-2">Upload a photo if dimensions are unclear or for fragile items.</p>
+
+                {/* Image Preview Grid */}
+                {images.length > 0 && (
+                  <div className="mt-6">
+                    <h4 className="text-sm font-medium text-gray-700 mb-3">Attached Images ({images.length})</h4>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                      {images.map((img, index) => (
+                        <div key={index} className="relative group">
+                          <img
+                            src={img}
+                            alt={`Uploaded package ${index + 1}`}
+                            className="w-full h-32 object-cover rounded-lg border border-gray-200 shadow-sm"
+                          />
+                          <button
+                            type="button"
+                            onClick={() => removeImage(index)}
+                            className="absolute -top-2 -right-2 bg-red-500 hover:bg-red-600 text-white p-1 rounded-full shadow-md transition-colors"
+                            title="Remove image"
+                          >
+                            <X className="w-4 h-4" />
+                          </button>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
 
