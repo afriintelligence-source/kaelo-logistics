@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12 px-6 md:px-12 border-t border-gray-800">
@@ -17,12 +19,9 @@ export default function Footer() {
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4">
-          <button className="bg-amber-400 hover:bg-amber-500 text-black font-bold py-3 px-8 rounded-md uppercase tracking-wide transition-colors">
+          <Link href="/quote" className="bg-amber-400 hover:bg-amber-500 text-black font-bold py-3 px-8 rounded-md uppercase tracking-wide transition-colors inline-block text-center">
             Get a Quote
-          </button>
-          <button className="bg-gray-200 hover:bg-white text-black font-bold py-3 px-8 rounded-md uppercase tracking-wide transition-colors">
-            Track a Delivery
-          </button>
+          </Link>
         </div>
       </div>
 

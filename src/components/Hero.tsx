@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
@@ -28,9 +29,6 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4">
           <button className="bg-amber-400 hover:bg-amber-500 text-black font-bold py-3 px-8 rounded-md uppercase tracking-wide transition-colors">
             Get a Quote
-          </button>
-          <button className="bg-gray-100 hover:bg-white text-black font-bold py-3 px-8 rounded-md uppercase tracking-wide transition-colors">
-            Track a Delivery
           </button>
         </div>
       </div>
