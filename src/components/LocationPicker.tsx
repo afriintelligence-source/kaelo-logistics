@@ -30,7 +30,7 @@ export default function LocationPicker({ label, onLocationSelect }: LocationPick
             } else {
                 setSearchResults([]);
             }
-        }, 1000);
+        }, 300); // Reduced to 300ms for faster feedback
 
         return () => clearTimeout(timer);
     }, [searchQuery]);

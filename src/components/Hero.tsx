@@ -27,9 +27,9 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4">
-          <button className="bg-amber-400 hover:bg-amber-500 text-black font-bold py-3 px-8 rounded-md uppercase tracking-wide transition-colors">
+          <Link href="/quote" className="bg-amber-400 hover:bg-amber-500 text-black font-bold py-3 px-8 rounded-md uppercase tracking-wide transition-colors text-center">
             Get a Quote
-          </button>
+          </Link>
         </div>
       </div>
     </div>
