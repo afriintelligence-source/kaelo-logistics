@@ -8,11 +8,11 @@ export default function Footer() {
         {/* Logo and Tagline */}
         <div className="text-center md:text-left">
           <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-            <img
+            {/* <img
               src="/logo.png"
               alt="Kaelo Logistics"
               className="h-24 w-auto object-contain invert brightness-0"
-            />
+            /> */}
           </div>
           <p className="text-gray-400 text-sm mb-4">Local Delivery. Securely Delivered.</p>
           <div className="flex gap-4">

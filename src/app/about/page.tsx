@@ -10,72 +10,50 @@ export default function AboutPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <div className="bg-gray-900 text-white py-20 px-6">
+      <div className="bg-gray-900 text-white py-16 md:py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">About Kaelo Logistics</h1>
-          <p className="text-xl text-gray-300">
-            We Fulfill. You Thrive.
-          </p>
+          <h1 className="text-3xl md:text-5xl font-bold mb-6">About Kaelo Logistics</h1>
+          <p className="text-lg md:text-xl text-gray-300">We Fulfill. You Thrive.</p>
         </div>
       </div>
 
       {/* Founding Story */}
-      <section className="py-16 px-6 md:px-12 max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-black mb-6 text-center">Our Founding Story</h2>
-        <div className="space-y-6 text-gray-900 leading-relaxed text-lg font-medium">
+      <div className="max-w-4xl mx-auto py-12 md:py-16 px-6">
+        <h2 className="text-2xl md:text-3xl font-bold text-black mb-6">Our Story</h2>
+        <div className="space-y-6 text-gray-900 font-medium leading-relaxed">
           <p>
-            At Kaelo Logistics, our journey began with a simple yet powerful belief: that every South African business, regardless of size or location, deserves access to reliable, transparent and empowering logistics.
+            Kaelo Logistics was born out of a simple observation: small businesses and individuals needed a courier service that wasn't just about moving boxes, but about <strong>moving relationships forward</strong>.
           </p>
           <p>
-            Founded by Neo Mohlabeng - an entrepreneur who personally experienced the gaps in our country’s delivery landscape - Kaelo was born not from a boardroom strategy, but from the real-world challenges of growing a business without a logistics partner you could truly trust.
+            Founded in 2024 by Neo Mohlabeng, we started with a single vehicle and a commitment to reliability. We saw that while big logistics companies offered scale, they often lacked the personal touch and flexibility that local businesses require.
           </p>
           <p>
-            We saw a system where small and medium enterprises faced an impossible choice: sacrifice affordability for reliability, or risk their reputation with inconsistent service. We witnessed how logistical barriers stifled ambition, limited reach, and eroded the trust between businesses and their customers. And we recognised that this wasn’t just a business problem, it was a barrier to economic inclusion, community growth and national progress.
-          </p>
-          <p>
-            So we decided to build a different kind of logistics company. One that bridges divides instead of creating them. One that leverages technology not to replace human connection, but to strengthen it. One that sees every parcel not as a simple transaction, but as a vital link in someone’s dream, livelihood or opportunity.
-          </p>
-          <p>
-            From the bustling hubs of Gauteng to the growing economies of Limpopo, KwaZulu-Natal and North West, we are redefining what logistics can be. We are proving that reliability doesn’t have to come at a premium, that transparency should be the standard, and that every business, whether in a high-rise or a home office, deserves a partner who shows up, follows through and helps them move forward.
-          </p>
-          <p className="font-bold text-black">
-            This is more than our story. It’s our commitment. A promise to deliver not just packages, but progress. To be not just a service, but a steadfast partner in the journey of every business we serve. Because at Kaelo, we believe that when logistics work better, businesses grow stronger, communities thrive deeper, and South Africa moves forward together.
+            "Kaelo" means "Growth" or "Beginning" in Sesotho. It represents our promise to our clients: when you partner with us, we help facilitate your growth by ensuring your goods reach their destination safely and on time.
           </p>
         </div>
-      </section>
+      </div>
 
       {/* Mission & Vision */}
-      <section className="py-16 px-6 md:px-12 max-w-7xl mx-auto bg-white/90 backdrop-blur-sm rounded-3xl shadow-lg my-8">
-        <div className="grid md:grid-cols-2 gap-12">
-          <div className="bg-amber-50 p-8 rounded-2xl border border-amber-100">
-            <div className="flex items-center gap-3 mb-4">
-              <Target className="w-8 h-8 text-amber-600" />
-              <h3 className="text-2xl font-bold text-gray-900">Our Mission</h3>
-            </div>
-            <p className="text-gray-700 leading-relaxed">
-              To empower South African businesses by providing accessible, transparent, and reliable logistics solutions that turn shipping from a constant headache into a competitive advantage. We believe every SME deserves a courier partner that is as invested in their success as they are, delivering not just parcels, but peace of mind and possibility.
+      <div className="bg-white py-12 md:py-16 px-6">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12">
+          <div className="bg-amber-50 p-6 md:p-8 rounded-lg shadow-sm border border-amber-100">
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+            <p className="text-gray-700">
+              To provide reliable, efficient, and personalized logistics solutions that empower local businesses to grow and connect communities across South Africa.
             </p>
           </div>
-
-          <div className="bg-gray-900 p-8 rounded-2xl text-white">
-            <div className="flex items-center gap-3 mb-4">
-              <Shield className="w-8 h-8 text-amber-400" />
-              <h3 className="text-2xl font-bold text-white">Our Vision</h3>
-            </div>
-            <p className="text-gray-300 leading-relaxed">
-              To become the most trusted and indispensable logistics network in Southern Africa, renowned for bridging economic divides and enabling seamless commerce from major CBDs to every township and town. We envision a future where any business, anywhere in our regions, can grow without limits, supported by a delivery service they can count on.
+          <div className="bg-gray-50 p-6 md:p-8 rounded-lg shadow-sm border border-gray-100">
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+            <p className="text-gray-700">
+              To be the most trusted local courier partner in South Africa, known for our commitment to service excellence, community support, and sustainable growth.
             </p>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Core Values */}
-      <section className="py-16 px-6 md:px-12 max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-black mb-4">Our Seven Core Values</h2>
-          <p className="text-gray-900 font-medium text-lg">The principles that drive every delivery we make.</p>
-        </div>
-
+      <div className="max-w-7xl mx-auto py-12 md:py-16 px-6">
+        <h2 className="text-2xl md:text-3xl font-bold text-black text-center mb-8 md:mb-12">Our Core Values</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="bg-white p-6 rounded-xl shadow-md border border-amber-200 hover:shadow-lg transition-all hover:-translate-y-1">
             <Shield className="w-10 h-10 text-amber-500 mb-4" />
@@ -119,7 +97,7 @@ export default function AboutPage() {
             <p className="text-sm text-gray-700">We create meaningful opportunities for growth at every level.</p>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Stats Section */}
       <section className="bg-gray-900 py-16 px-6">

@@ -30,16 +30,16 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 px-6 bg-gray-50">
+    <section id="contact" className="py-12 md:py-20 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Contact Us</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
             We're here to help. Reach out to us for quotes, support, or general inquiries.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12">
 
           {/* Contact Info */}
           <div>

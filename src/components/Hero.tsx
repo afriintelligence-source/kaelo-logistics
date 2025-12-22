@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <div className="relative bg-gray-900 text-white py-20 md:py-32 px-6 md:px-12 overflow-hidden">
+    <div className="relative bg-gray-900 text-white py-16 md:py-32 px-6 md:px-12 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -20,12 +20,12 @@ export default function Hero() {
         <div className="inline-block bg-amber-400 text-black font-bold px-3 py-1 rounded-full text-sm mb-4">
           We Fulfill. You Thrive.
         </div>
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-4">
+        <h1 className="text-3xl md:text-6xl font-bold leading-tight mb-4">
           Reliable Local <br />
           Courier Services <br />
           You Can Trust,
         </h1>
-        <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-xl">
+        <p className="text-base md:text-xl text-gray-200 mb-8 max-w-xl">
           Fast, secure delivery for parcels, documents, and packages—powered by local delivery vehicles 🇿🇦 across South Africa 🇿🇦
         </p>
 

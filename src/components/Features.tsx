@@ -23,10 +23,10 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="py-20 px-6 md:px-12 bg-white">
+    <section className="py-12 md:py-20 px-6 md:px-12 bg-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">Serving Local Businesses Across South Africa</h2>
-        <p className="text-gray-600 mb-12 max-w-3xl">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Serving Local Businesses Across South Africa</h2>
+        <p className="text-gray-600 mb-8 md:mb-12 max-w-3xl">
           Whether you're a growing startup or an established business, Kaelo Logistics delivers with consistency, care, and local expertise. 🇿🇦
         </p>
 
