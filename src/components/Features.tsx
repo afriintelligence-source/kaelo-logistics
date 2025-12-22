@@ -29,12 +29,12 @@ export default function Features() {
         <p className="text-gray-600 mb-12 max-w-3xl">
           Whether you're a growing startup or an established business, Kaelo Logistics delivers with consistency, care, and local expertise. 🇿🇦
         </p>
-        
+
         <div className="grid md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="flex gap-4 p-6 bg-gray-50 rounded-xl border border-gray-100">
               <div className="shrink-0">
-                 <feature.icon className={`w-10 h-10 ${feature.color}`} />
+                <feature.icon className={`w-10 h-10 ${feature.color}`} />
               </div>
               <div>
                 <h3 className="font-bold text-lg text-gray-900 mb-2">{feature.title}</h3>

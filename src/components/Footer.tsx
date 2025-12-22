@@ -14,7 +14,14 @@ export default function Footer() {
               className="h-24 w-auto object-contain invert brightness-0"
             />
           </div>
-          <p className="text-gray-400 text-sm">Local Delivery. Securely Delivered.</p>
+          <p className="text-gray-400 text-sm mb-4">Local Delivery. Securely Delivered.</p>
+          <div className="flex gap-4">
+            {/* Social Media Placeholders - Replace hrefs with actual links when available */}
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-amber-400 transition-colors">Facebook</a>
+            <a href="https://www.instagram.com/kaelologistics/?igsh=MTVwZmN0ZXVsbGJlag%3D%3D#" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-amber-400 transition-colors">Instagram</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-amber-400 transition-colors">X (Twitter)</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-amber-400 transition-colors">LinkedIn</a>
+          </div>
         </div>
 
         {/* Buttons */}

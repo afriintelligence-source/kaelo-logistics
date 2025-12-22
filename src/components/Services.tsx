@@ -1,3 +1,5 @@
+'use client';
+
 import { Truck, Bike, Package, Briefcase } from 'lucide-react';
 
 const services = [
@@ -29,7 +31,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="py-20 px-6 md:px-12 bg-gray-50">
+    <section id="services" className="py-20 px-6 md:px-12 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-gray-900 mb-2">Local Delivery Solutions Built for Speed</h2>
         <p className="text-gray-600 mb-12">Quick, dependable services tailored to your business needs.</p>

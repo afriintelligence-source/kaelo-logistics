@@ -17,6 +17,9 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent z-0"></div>
 
       <div className="relative z-10 max-w-2xl">
+        <div className="inline-block bg-amber-400 text-black font-bold px-3 py-1 rounded-full text-sm mb-4">
+          We Fulfill. You Thrive.
+        </div>
         <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-4">
           Reliable Local <br />
           Courier Services <br />

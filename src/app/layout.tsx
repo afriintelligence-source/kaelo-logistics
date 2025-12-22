@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Kaelo Logistics",
   description: "Reliable Local Courier Services You Can Trust",
+  icons: {
+    icon: '/logo.png',
+  },
 };
 
 export default function RootLayout({

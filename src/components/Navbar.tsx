@@ -14,15 +14,15 @@ export default function Navbar() {
 
             <div className="hidden md:flex items-center gap-8 font-medium text-gray-700">
                 <Link href="/" className="hover:text-black">Home</Link>
-                <Link href="#" className="hover:text-black">Services</Link>
-                <Link href="#" className="hover:text-black">About Us</Link>
-                <Link href="#" className="hover:text-black">Contact</Link>
+                <Link href="/services" className="hover:text-black">Services</Link>
+                <Link href="/about" className="hover:text-black">About Us</Link>
+                <Link href="/#contact" className="hover:text-black">Contact</Link>
             </div>
 
-            <button className="bg-amber-400 hover:bg-amber-500 text-black font-bold py-2 px-6 rounded-md flex items-center gap-2 transition-colors">
+            <a href="tel:+27601234567" className="bg-amber-400 hover:bg-amber-500 text-black font-bold py-2 px-6 rounded-md flex items-center gap-2 transition-colors">
                 <Phone size={18} className="fill-current" />
                 <span>+27 60 123 4567</span>
-            </button>
+            </a>
         </nav>
     );
 }
